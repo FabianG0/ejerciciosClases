@@ -64,4 +64,24 @@
     <servlet-name>HmbConSesion</servlet-name>
     <url-pattern>/HmbConSesion</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>HmbConIntentos</display-name>
+    <servlet-name>HmbConIntentos</servlet-name>
+    <servlet-class>howManyBurgers.HmbConIntentos</servlet-class>
+    <init-param>
+      <description></description>
+      <param-name>max</param-name>
+      <param-value>100</param-value>
+    </init-param>
+    <init-param>
+      <description></description>
+      <param-name>intentosMaximos</param-name>
+      <param-value>5</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HmbConIntentos</servlet-name>
+    <url-pattern>/HmbConIntentos</url-pattern>
+  </servlet-mapping>
 </web-app>

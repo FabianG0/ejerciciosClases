@@ -55,13 +55,11 @@ public class Hmb extends HttpServlet {
 		}
 		salida = response.getWriter();
 		response.setContentType("text/html");
-		respuesta = "<!DOCTYPE html> \r\n" + "<html lang='en'> \r\n" + "<head>\r\n" + "<title>hmb - Resultados</title>\r\n"
-				+ "</head>\r\n" + "<body>\r\n" + "<h1>Y los resultados son ...</h1>";
+		respuesta = "<!DOCTYPE html> \r\n" + "<html lang='en'> \r\n" + "<head>\r\n"
+				+ "<title>hmb - Resultados</title>\r\n" + "</head>\r\n" + "<body>\r\n"
+				+ "<h1>Y los resultados son ...</h1>";
 		salida.println(respuesta);
-		respuesta = "<img src=\"images/bob.png\" alt=\"bob\">\r\n"
-				+ cadena +"\r\n"
-				+ "</body>\r\n"
-				+ "</html>";
+		respuesta = "<img src=\"images/bob.png\" alt=\"bob\">\r\n" + cadena + "\r\n" + "</body>\r\n" + "</html>";
 		salida.println(respuesta);
 	}
 
