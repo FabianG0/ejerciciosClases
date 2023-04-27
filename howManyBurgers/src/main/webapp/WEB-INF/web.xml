@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:web="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd" id="WebApp_ID" version="5.0">
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:web="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd http://xmlns.jcp.org/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="5.0">
   <display-name>howManyBurgers</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
@@ -15,13 +15,53 @@
     <servlet-name>Hmb</servlet-name>
     <servlet-class>howManyBurgers.Hmb</servlet-class>
     <init-param>
-    	<description></description>
-    	<param-name>max</param-name>
-		<param-value>100</param-value>
+      <description></description>
+      <param-name>max</param-name>
+      <param-value>100</param-value>
     </init-param>
   </servlet>
   <servlet-mapping>
     <servlet-name>Hmb</servlet-name>
     <url-pattern>/Hmb</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>HmbConCookies</display-name>
+    <servlet-name>HmbConCookies</servlet-name>
+    <servlet-class>howManyBurgers.HmbConCookies</servlet-class>
+    <init-param>
+      <description></description>
+      <param-name>max</param-name>
+      <param-value>100</param-value>
+    </init-param>
+    <init-param>
+      <description></description>
+      <param-name>intentosMaximos</param-name>
+      <param-value>100</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HmbConCookies</servlet-name>
+    <url-pattern>/HmbConCookies</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>HmbConSesion</display-name>
+    <servlet-name>HmbConSesion</servlet-name>
+    <servlet-class>howManyBurgers.HmbConSesion</servlet-class>
+    <init-param>
+      <description></description>
+      <param-name>max</param-name>
+      <param-value>100</param-value>
+    </init-param>
+    <init-param>
+      <description></description>
+      <param-name>intentosMaximos</param-name>
+      <param-value>100</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HmbConSesion</servlet-name>
+    <url-pattern>/HmbConSesion</url-pattern>
   </servlet-mapping>
 </web-app>
